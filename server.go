@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	database "mymodule/db"
+	"log"
 	"net/http"
 	"os"
 
@@ -123,5 +124,7 @@ func main() {
 
 	appUrl := os.Getenv("APP_URL")
 	fmt.Printf("Server listening on %s...\n", appUrl)
-	r.Run(appUrl)
+	if err := r.Run(appUrl); err != nil {
+		log.Fatal(err)
+	}
 }
