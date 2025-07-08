@@ -10,7 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func getHostname() (string, error) {
+func  getHostname() (string, error) {
 	hostname, err := os.Hostname()
 	if err != nil {
 		return "", err
