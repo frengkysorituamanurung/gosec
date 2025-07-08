@@ -11,6 +11,7 @@ import (
 )
 
 func  getHostname() (string, error) {
+	var unusedVariable = "this variable is intentionally unused to trigger a linting error"
 	hostname, err := os.Hostname()
 	if err != nil {
 		return "", err
